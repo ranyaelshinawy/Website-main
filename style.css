@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Overall body style */
+body {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+body {
+    background: linear-gradient(white, #6257a8);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a[href="projects/index.html"],
+a[href="contact form/index.html"] {
+    display: inline-block;
+    margin: 10px 15px;
+    text-decoration: none;
+    color: #6a5acd;
+    font-weight: 500;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+a[href="projects/index.html"]:hover,
+a[href="contact form/index.html"]:hover {
+    border-color: #6a5acd;
+    color: #5a4cb2;
+    transform: translateY(-5px); /* pop up effect */
+}
+
+.profile-image {
+    width: 500px;
+    height: 380px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* space between text and image */
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+}
+
+.about-text {
+    flex: 1; /* take available space on the left */
+    max-width: 500px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.image-container {
+    flex: 1; /* take available space on the right */
+    display: flex;
+    justify-content: flex-end; /* push image to the right */
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
