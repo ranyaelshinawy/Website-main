@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,22 +6,25 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Overall body style */
-body {
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-}
-
+/* Page layout */
 body {
     background: linear-gradient(white, #6257a8);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Navigation */
+.top-nav {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
     justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 a[href="projects/index.html"],
@@ -30,7 +34,7 @@ a[href="contact form/index.html"] {
     text-decoration: none;
     color: #6a5acd;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
     transform: translateY(0);
@@ -42,51 +46,88 @@ a[href="contact form/index.html"]:hover {
     color: #5a4cb2;
     transform: translateY(-5px); /* pop up effect */
 }
-
-.profile-image {
-    width: 500px;
-    height: 380px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Greeting section */
+.greeting {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
+.greeting h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.greeting p {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+/* About + image layout */
 .content-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px; /* space between text and image */
+    gap: 40px;
     max-width: 1000px;
     width: 100%;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
+/* About text */
 .about-text {
-    flex: 1; /* take available space on the left */
+    flex: 1;
     max-width: 500px;
 }
 
-.about-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
 .about-text p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #444;
 }
 
+/* Image */
 .image-container {
-    flex: 1; /* take available space on the right */
+    flex: 1;
     display: flex;
-    justify-content: flex-end; /* push image to the right */
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
 }
 
 .profile-image {
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 650px;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hello-world-animation {
+    display: flex;
+    justify-content: center;
+}
+
+.hello-world-animation p {
+    font-family: "Consolas";
+    font-size: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(22) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
