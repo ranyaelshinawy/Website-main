@@ -15,6 +15,7 @@ body {
     align-items: center;
     padding: 40px 20px;
     color: #333;
+    animation: fadeInUp 1s ease-out;
 }
 
 /* Navigation */
@@ -44,7 +45,7 @@ a[href="projects/index.html"]:hover,
 a[href="contact form/index.html"]:hover {
     border-color: #6a5acd;
     color: #5a4cb2;
-    transform: translateY(-5px); /* pop up effect */
+    transform: translateY(-5px);
 }
 /* Greeting section */
 .greeting {
@@ -53,12 +54,14 @@ a[href="contact form/index.html"]:hover {
 }
 
 .greeting h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 10px;
+    color: #2c2c2c;
 }
 
 .greeting p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #555;
 }
 
@@ -70,20 +73,28 @@ a[href="contact form/index.html"]:hover {
     gap: 40px;
     max-width: 1000px;
     width: 100%;
+    height: 450px;
     padding: 20px;
     flex-wrap: wrap;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* About text */
+.about-text h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    color: #6a5acd;
+    text-align: center;
+}
+
 .about-text {
     flex: 1;
     max-width: 500px;
-}
-
-.about-text p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #444;
+    text-align: center;
 }
 
 /* Image */
@@ -92,13 +103,17 @@ a[href="contact form/index.html"]:hover {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    gap: 10px;
+    margin-left: 0;
+}
+.about-text, .image-container {
+    flex: 1;
+    max-width: 45%;
 }
 
 .profile-image {
     width: 100%;
-    width: 650px;
-    height: 500px;
+    max-width: 650px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
@@ -117,6 +132,77 @@ a[href="contact form/index.html"]:hover {
     animation: typing 3s steps(22) forwards, blink 0.75s step-end infinite;
 }
 
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(106, 90, 205, 0.5);
+    border: 2px rgba(106, 90, 205, 0.5);
+    border-radius: 100%;
+    z-index: -1;
+}
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-child(8) {
+    top: 30%;
+    left: 90%;
+    animation: animate 8s linear infinite;
+}
+.box div:nth-child(9) {
+    top: 50%;
+    left: 20%;
+    animation: animate 11s linear infinite;
+}
+.box div:nth-child(10) {
+    top: 40%;
+    left: 30%;
+    animation: animate 13s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-90px);
+        opacity: 0;
+    }
+}
+
 @keyframes typing {
     from {
         width: 0;
@@ -129,5 +215,16 @@ a[href="contact form/index.html"]:hover {
 @keyframes blink {
     50% {
         border-color: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
