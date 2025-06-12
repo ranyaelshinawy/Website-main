@@ -15,8 +15,8 @@
     margin-bottom: 40px;
 }
 
-a[href="/index.html"],
-a[href="/contact form/index.html"] {
+a[href="../index.html"],
+a[href="../contact form/index.html"] {
     display: inline-block;
     margin: 10px 15px;
     text-decoration: none;
@@ -28,8 +28,8 @@ a[href="/contact form/index.html"] {
     transform: translateY(0);
 }
 
-a[href="/index.html"]:hover,
-a[href="/contact form/index.html"]:hover {
+a[href="../index.html"]:hover,
+a[href="../contact form/index.html"]:hover {
     border-color: #6a5acd;
     color: #5a4cb2;
     transform: translateY(-5px);

@@ -110,8 +110,8 @@ textarea {
 }
 
 /* Navigation links with pop-up hover */
-a[href="/index.html"],
-a[href="/projects/index.html"] {
+a[href="../index.html"],
+a[href="../projects/index.html"] {
     display: inline-block;
     margin: 30px 15px;
     text-decoration: none;
@@ -123,8 +123,8 @@ a[href="/projects/index.html"] {
     transform: translateY(0);
 }
 
-a[href="/index.html"]:hover,
-a[href="/projects/index.html"]:hover {
+a[href="../index.html"]:hover,
+a[href="../projects/index.html"]:hover {
     border-color: #6a5acd;
     color: #5a4cb2;
     transform: translateY(-5px); /* pop up effect */
