@@ -113,7 +113,7 @@ textarea {
 a[href="/index.html"],
 a[href="/projects/index.html"] {
     display: inline-block;
-    margin: 10px 15px;
+    margin: 30px 15px;
     text-decoration: none;
     color: #6a5acd;
     font-weight: 500;
@@ -137,6 +137,13 @@ a[href="/projects/index.html"]:hover {
     overflow: hidden;
     background: linear-gradient(white, #6257a8);
     z-index: -1;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; /* Only add this if the page content fits in one screen */
 }
 
 .box div {
